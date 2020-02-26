@@ -8,12 +8,12 @@ const List = (props) => {
         <div>
             {props.newMembers.map((elem, i) => {
                 return <div key={i}>
-                    <h1>{elem.fname} {elem.lname}</h1>
-                    <h2>{elem.role}</h2>
-                    <h3>{elem.email}</h3>
+                    <h1>Name: {elem.fname} {elem.lname}</h1>
+                    <h2>Role: {elem.role}</h2>
+                    <h3>Email: {elem.email}</h3>
                 </div>
             })}
-            <button>Edit Team Member</button>
+            <button onClick={props.eraseMember}>Edit Team Member</button>
         </div>
     
 

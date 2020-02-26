@@ -30,8 +30,15 @@ const Form = () => {
         };
         
         setNewMembers([...newMembers, newMember])
-        console.log(newMembers)
+        
     };
+
+    const [memberToEdit, setMemberToEdit] = useState();
+
+    const eraseMember = () => {
+       setMemberToEdit(teamMember)
+       console.log(memberToEdit)
+    }
 
     const handleChange = e => {
         setTeamMember({...teamMember, [e.target.name] : e.target.value})
@@ -70,7 +77,7 @@ const Form = () => {
                 <button type='submit'>Submit</button>
             </form>
 
-            <List newMembers={newMembers} fname={teamMember.fname} lname={teamMember.lname} role={teamMember.role} email={teamMember.email}/>
+            <List eraseMember={eraseMember} memberToEdit={memberToEdit} newMembers={newMembers} fname={teamMember.fname} lname={teamMember.lname} role={teamMember.role} email={teamMember.email}/>
         </div>
         
        
