@@ -21,7 +21,11 @@ const Form = () => {
     }]);
 
     const [memberToEdit, setMemberToEdit] = useState({
-    
+        id: newMembers.id,
+        fname: newMembers.fname,
+        lname: newMembers.lname,
+        role: newMembers.role,
+        email: newMembers.email
     });
 
 
