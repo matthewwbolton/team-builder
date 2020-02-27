@@ -20,6 +20,10 @@ const Form = () => {
         email: 'matthew.bolton.lambda@gmail.com'
     }]);
 
+    const [memberToEdit, setMemberToEdit] = useState({});
+
+
+
     const addNewMember = member => {
         const newMember = {
             id: Date.now(),
@@ -32,13 +36,6 @@ const Form = () => {
         setNewMembers([...newMembers, newMember])
         
     };
-
-    const [memberToEdit, setMemberToEdit] = useState();
-
-    const eraseMember = () => {
-       setMemberToEdit(teamMember)
-       console.log(memberToEdit)
-    }
 
     const handleChange = e => {
         setTeamMember({...teamMember, [e.target.name] : e.target.value})
@@ -77,7 +74,7 @@ const Form = () => {
                 <button type='submit'>Submit</button>
             </form>
 
-            <List eraseMember={eraseMember} memberToEdit={memberToEdit} newMembers={newMembers} fname={teamMember.fname} lname={teamMember.lname} role={teamMember.role} email={teamMember.email}/>
+            <List teamMember={teamMember} setMemberToEdit={setMemberToEdit} memberToEdit={memberToEdit} newMembers={newMembers} fname={teamMember.fname} lname={teamMember.lname} role={teamMember.role} email={teamMember.email}/>
         </div>
         
        
