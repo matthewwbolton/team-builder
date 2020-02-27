@@ -20,7 +20,9 @@ const Form = () => {
         email: 'matthew.bolton.lambda@gmail.com'
     }]);
 
-    const [memberToEdit, setMemberToEdit] = useState({});
+    const [memberToEdit, setMemberToEdit] = useState({
+    
+    });
 
 
 
