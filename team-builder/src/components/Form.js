@@ -27,16 +27,16 @@ const Form = (props) => {
             <form onSubmit={handleSubmit}>
                 <h2>Add A Member</h2>
                 <label htmlFor='name'>name:
-                    <input onChange={handleChange} type='text' id='name' placeholder='name' value={input.name} />
+                    <input onChange={handleChange} name='name' type='text' id='name' placeholder='name' value={input.name} />
                 </label>
                 <label htmlFor='email'>email:
-                    <input onChange={handleChange} type='email' id='email' placeholder='email' value={input.email} />
+                    <input onChange={handleChange} name='email' type='email' id='email' placeholder='email' value={input.email} />
                 </label>
                 <label htmlFor='role'>role:
-                    <input onChange={handleChange} type='text' id='role' placeholder='role' value={input.role} />
+                    <input onChange={handleChange} name='role' type='text' id='role' placeholder='role' value={input.role} />
                 </label>
                 <label htmlFor='location'>location:
-                    <input onChange={handleChange} type='text' id='location' placeholder='location' value={input.location} />
+                    <input onChange={handleChange} name='location' type='text' id='location' placeholder='location' value={input.location} />
                 </label>
                 <button type='submit'>Submit</button>
             </form>
